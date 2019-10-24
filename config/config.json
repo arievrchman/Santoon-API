@@ -11,7 +11,6 @@
     "password": "ef16196c3d1d8ffb30cc0cc5a97ca38521a90344dafdd14330ebed92a41611a6",
     "database": "db5s43ke37n86p",
     "host": "ec2-107-21-200-103.compute-1.amazonaws.com",
-    "port": "5432",
     "dialect": "postgres"
   }
 }
