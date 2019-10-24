@@ -139,7 +139,7 @@ exports.deleteEpisode = async (req, res) => {
       },
     });
     if (!validate) {
-      return res.status(400).json({ error: 'Invalid' });
+      return res.status(400).json({ error: 'Access Denied!' });
     }
     await Episode.destroy({
       where: { id: req.params.episodeId },

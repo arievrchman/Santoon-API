@@ -86,11 +86,7 @@ exports.createPage = async (req, res) => {
       episodeId: req.params.episodeId,
     };
     const data = await Page.create(page);
-    res.status(201).json({
-      success: 'Page created!',
-      data,
-    });
-    res.json(validate)
+    res.status(201).json(data);
   } catch (error) {
     res.status(500).json({ error: 'Something went wrong, please try again!' });
   }
@@ -122,10 +118,7 @@ exports.deletePage = async (req, res) => {
     await Page.destroy({
       where: { id: req.params.imageId },
     });
-    res.json({
-      success: 'Page deleted!',
-      id: req.params.imageId,
-    });
+    res.json({ id: req.params.imageId });
   } catch (error) {
     res.status(500).json({ error: 'Something went wrong, please try again!' });
   }
